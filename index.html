@@ -15,13 +15,16 @@
   .stats { display: -webkit-flex; display: flex; gap: 12px; margin-bottom: 16px; font-size: 14px; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
   .stat { background-color: #ffffff; padding: 10px 16px; border-radius: 8px; border: 1px solid #dddddd; }
   .stat b { font-size: 20px; display: block; }
-  table { width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #dddddd; }
+  table { width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #dddddd; margin-bottom: 8px; }
   th { background-color: #f8f8f8; padding: 8px 12px; text-align: left; font-size: 13px; border-bottom: 2px solid #dddddd; }
   td { padding: 6px 12px; border-bottom: 1px solid #eeeeee; font-size: 13px; word-break: break-word; }
   tr.month-header td { background-color: #e8e8e8; font-weight: 700; font-size: 14px; padding: 10px 12px; }
   tr.watch-match { background-color: #fff3cd; }
   tr.watch-match td { font-weight: 600; }
+  tr.new-match { background-color: #d4edda; }
+  tr.watch-match.new-match { background-color: #fff3cd; }
   .badge { background-color: #ffc107; color: #333333; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; white-space: nowrap; display: inline-block; }
+  .badge-new { background-color: #28a745; color: #ffffff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; white-space: nowrap; display: inline-block; margin-left: 4px; }
   a { color: #228be6; text-decoration: none; }
   a:hover { text-decoration: underline; }
   .footer { margin-top: 16px; font-size: 12px; color: #999999; }
@@ -34,21 +37,18 @@
 <body>
 <div class="container">
   <h1>Re:Hof - Verfuegbarkeitsuebersicht</h1>
-  <p class="meta">Letzter Scan: 18.03.2026 11:43 (full) | Full-Check 1x taeglich, Quick-Checks alle 2h</p>
+  <p class="meta">Letzter Scan: 18.03.2026 12:04 (full) | Full-Check 1x taeglich, Quick-Checks alle 2h</p>
   <div class="stats">
     <div class="stat"><b>130</b> freie Zeitraeume</div>
-    <div class="stat"><b>0</b> in Watch-Zeitraeumen</div>
+    <div class="stat"><b>0</b> in Watches</div>
+    <div class="stat"><b>0</b> neu (5 Tage)</div>
   </div>
-  <h2 style="font-size:18px;margin-bottom:8px;">Gesuchte Zeitraeume (0 Treffer)</h2>
-  <table>
-    <thead><tr><th>Zeitraum</th><th>Unterkunft</th><th>Watch</th><th>Link</th></tr></thead>
-    <tbody></tbody>
-  </table>
-
-  <h2 style="margin-top:24px;font-size:18px;">Weitere Verfuegbarkeiten</h2>
-  <table>
-    <thead><tr><th>Zeitraum</th><th>Unterkunft</th><th></th><th>Link</th></tr></thead>
-    <tbody><tr class="month-header" id="2026-03"><td colspan="4">Maerz 2026</td></tr>
+  
+  
+  
+  <h2>Alle weiteren Verfuegbarkeiten</h2>
+  <table><thead><tr><th>Zeitraum</th><th>Unterkunft</th><th></th><th>Link</th></tr></thead>
+  <tbody><tr class="month-header" id="2026-03"><td colspan="4">Maerz 2026</td></tr>
 <tr class=""><td>So 22.03. - Do 26.03. (4N)</td><td>Pfarrhaus Süd</td><td></td><td><a href="https://beds24.com/booking2.php?propid=117918&firstnight=2026-03-22&numnight=4&numadult=2&numchild=0" target="_blank">pruefen</a></td></tr>
 <tr class=""><td>So 22.03. - Fr 27.03. (5N)</td><td>Stallgebäude Süd</td><td></td><td><a href="https://beds24.com/booking2.php?propid=117918&firstnight=2026-03-22&numnight=5&numadult=2&numchild=0" target="_blank">pruefen</a></td></tr>
 <tr class=""><td>Mo 23.03. - Fr 27.03. (4N)</td><td>Hofgebäude</td><td></td><td><a href="https://beds24.com/booking2.php?propid=117918&firstnight=2026-03-23&numnight=4&numadult=2&numchild=0" target="_blank">pruefen</a></td></tr>
@@ -187,8 +187,7 @@
 <tr class=""><td>So 03.01. - So 21.03. (77N)</td><td>Pfarrhaus Süd</td><td></td><td><a href="https://beds24.com/booking2.php?propid=117918&firstnight=2027-01-03&numnight=77&numadult=2&numchild=0" target="_blank">pruefen</a></td></tr>
 <tr class=""><td>So 03.01. - So 21.03. (77N)</td><td>Stallgebäude Süd</td><td></td><td><a href="https://beds24.com/booking2.php?propid=117918&firstnight=2027-01-03&numnight=77&numadult=2&numchild=0" target="_blank">pruefen</a></td></tr>
 <tr class=""><td>So 03.01. - So 21.03. (77N)</td><td>Stallgebäude West</td><td></td><td><a href="https://beds24.com/booking2.php?propid=117918&firstnight=2027-01-03&numnight=77&numadult=2&numchild=0" target="_blank">pruefen</a></td></tr>
-</tbody>
-  </table>
+</tbody></table>
   <p class="footer">
     Buchungsanfragen: <a href="mailto:gast@re-hof.de">gast@re-hof.de</a> |
     <a href="https://beds24.com/booking2.php?propid=117918">Buchungskalender</a>
